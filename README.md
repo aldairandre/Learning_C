@@ -1,6 +1,6 @@
 # Learning C programming language
 
-Created by Dennis Ritchie in 1978
+Created by Dennis Ritchie in 1972
 
 ## References
 
