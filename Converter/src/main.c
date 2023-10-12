@@ -10,9 +10,9 @@ int main(int argc, char const *argv[])
   // VARIABLES
   bool dontleave = true;
 
-  int choose = menu();
+  int choice = menu();
 
-  switch (choose)
+  switch (choice)
   {
   case 1:
     decimalToBanary();

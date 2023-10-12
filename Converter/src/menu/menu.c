@@ -2,7 +2,7 @@
 
 int menu()
 {
-  int choose;
+  int choice;
 
   printf("\n");
   printf("\n");
@@ -18,7 +18,7 @@ int menu()
   printf("\t[ 2 ] - Binario para Decimal\n");
   printf("\n");
   printf("\t[ 3 ] - Sair\n");
-  scanf("%d", &choose);
+  scanf("%d", &choice);
 
-  return choose;
+  return choice;
 }
