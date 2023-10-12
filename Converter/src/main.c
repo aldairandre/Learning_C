@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 // Functions
-#include "menu/menu.h"
+#include "menu.h"
 
 int main(int argc, char const *argv[])
 {
