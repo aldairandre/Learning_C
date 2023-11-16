@@ -2,27 +2,30 @@
 #include <stdbool.h>
 
 // Functions
-#include "menu.h"
+#include "../include/menu.h"
+#include "../include/options.h"
 
 int main(int argc, char const *argv[])
 {
 
-  // VARIABLES
-  bool dontleave = true;
+  int choice;
 
-  int choice = menu();
+  menu();
+  scanf("%d", &choice);
 
   switch (choice)
   {
   case 1:
-    decimalToBanary();
+    decimalToBinary();
     break;
   case 2:
-    banaryToDecimal();
+    binaryToDecimal();
     break;
   case 3:
     logOut();
     break;
+  default:
+    printf("Escolha inválida!\n");
   }
 
   printf("\n");
