@@ -2,8 +2,8 @@
 #include <stdbool.h>
 
 // Functions
-#include "../include/menu.h"
-#include "../include/options.h"
+#include "menu.h"
+#include "options.h"
 
 int main(int argc, char const *argv[])
 {

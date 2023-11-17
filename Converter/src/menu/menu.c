@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-int menu()
+void menu()
 {
-  int choice;
 
   printf("\n");
   printf("\n");
@@ -18,7 +17,5 @@ int menu()
   printf("\t[ 2 ] - Binario para Decimal\n");
   printf("\n");
   printf("\t[ 3 ] - Sair\n");
-  scanf("%d", &choice);
 
-  return choice;
 }
