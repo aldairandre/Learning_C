@@ -1,9 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "cleanConsole.h"
-#include "menu.h"
-#include "session.h"
 #include <unistd.h>
+#include "cleanConsole.h"
+#include "welcomeScreen.h"
+#include "header.h"
+#include "socialMedia.h"
+#include "session.h"
+#include "main.h"
+
+extern char userSession;
+extern bool keepSessionAlive;
 
 void decimalToBinary()
 {
@@ -11,15 +17,9 @@ void decimalToBinary()
   // VARIABLES
   int decimalNumber;
   const int BASE_NUMBER = 2;
-  char choice;
 
   cleanConsole();
-  printf("\n");
-  printf("\n");
-  printf("\n");
-  printf("\t===================================================\n");
-  printf("\t\tConversor DE SISTEMAS NUMERICOS\n");
-  printf("\t===================================================\n");
+  header();
   printf("\n");
   printf("\n");
   printf("\n");
@@ -53,9 +53,7 @@ void decimalToBinary()
   printf("\n");
   printf("\n");
   printf("\n");
-  printf("\t===================================================\n");
-  printf("\t\tConversor DE SISTEMAS NUMERICOS\n");
-  printf("\t===================================================\n");
+  header();
   printf("\n");
   printf("\tNumero Binario: (%d)10 ---> ", decimalNumber);
   for (int j = index - 1; j >= 0; j--)
@@ -64,18 +62,11 @@ void decimalToBinary()
   }
   printf("\n");
   printf("\n");
-  printf("\tDeseja continuar [s/n]");
-  scanf("\t\t%c", &choice);
-
-  while (true)
-  {
-    session(choice);
-  }
+  
 }
 
 void binaryToDecimal()
 {
-  char choice;
   cleanConsole();
   printf("\n");
   printf("\n");
@@ -90,10 +81,6 @@ void binaryToDecimal()
   printf("\n");
   printf("\n");
   printf("\n");
-  while (true)
-  {
-    session(choice);
-  }
 }
 
 void logOut()
@@ -110,15 +97,10 @@ void logOut()
   printf("\n");
   printf("\tEspero que tenha desfutado da nossa calculadora\n");
   sleep(3);
-  cleanConsole();
   printf("\n");
   printf("\n");
   printf("\n");
-  printf("\t===================================================\n");
-  printf("\t\t>>> Creator: Aldair André (@André) <<< \n");
-  printf("\t===================================================\n\n");
-
-  printf("\t> GitHub: https://github.com/aldairandre \n");
-  printf("\t> Facebook: https://www.facebook.com/aldair.andre99 \n");
-  printf("\t> LinkedIn: https://www.linkedin.com/in/aldairandre \n\n");
+  printf("\n");
+  socialMedia();
+  _exit(1);
 }

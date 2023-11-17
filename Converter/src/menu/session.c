@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "menu.h"
 #include "options.h"
 #include "cleanConsole.h"
 #include "socialMedia.h"
 #include <unistd.h>
 
-bool session(char choice)
+extern int choice;
+extern char userSession;
+extern bool keepSessionAlive;
+
+bool session()
 {
-
-  int newChoice;
-
-  bool keepSessionAlive;
-
-  switch (choice)
+  switch (userSession)
   {
   case 's':
     keepSessionAlive = true;
@@ -23,14 +21,18 @@ bool session(char choice)
     break;
   case 'n':
     keepSessionAlive = false;
-    
     printf("\n");
     printf("\n");
     printf("\n");
     socialMedia();
+    _exit(1);
     break;
   case 'N':
     keepSessionAlive = false;
+    printf("\n");
+    printf("\n");
+    printf("\n");
+    socialMedia();
     break;
   default:
     keepSessionAlive = false;
@@ -39,14 +41,10 @@ bool session(char choice)
 
   if (keepSessionAlive)
   {
-    menu();
-    scanf("\t\t%d", &newChoice);
-
-    switch (newChoice)
+    switch (choice)
     {
     case 1:
       decimalToBinary();
-      return true;
       break;
     case 2:
       binaryToDecimal();

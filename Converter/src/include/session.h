@@ -1,6 +1,6 @@
 #ifndef SESSION_H 
 #define SESSION_H
 
-void session(char choice);
+void session(void);
  
 #endif
