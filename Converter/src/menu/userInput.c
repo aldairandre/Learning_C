@@ -4,6 +4,7 @@
 #include "digitChecker.h"
 #include "header.h"
 #include "socialMedia.h"
+#include "welcomeScreen.h"
 
 #define ENTER 13
 #define TAB 9
@@ -29,9 +30,12 @@ void userInput(int choice)
 
     if (flag == 1)
     {
+      cleanConsole();
       printf("\nError: Decimal number can't be negative. \n");
       printf("Press any key to continue... \n");
-      getchar();
+      sleep(5);
+      cleanConsole();
+      welcomeScreen();
     }
     else
     {
@@ -89,7 +93,7 @@ void userInput(int choice)
   else if (choice == 4) // HexaDecimal input validation code
   {
 
-     printf("Feature sendo criada\n");
+    printf("Feature sendo criada\n");
     /* char hexa[50];
     char ch;
     int i = 0, j = 0, k = 0, flag = 0;
@@ -140,13 +144,14 @@ void userInput(int choice)
     {
       printf("Feature sendo criada\n");
     } */
-  }else if (choice == 5)
+  }
+  else if (choice == 5)
   {
     cleanConsole();
     socialMedia();
     _exit(1);
   }
-  
+
   else // Very rare case message
     printf("\n>> Unexpected Error occured. Report to program Administrator << \n");
 }
