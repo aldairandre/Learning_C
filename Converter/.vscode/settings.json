@@ -3,6 +3,7 @@
     "*.css": "tailwindcss",
     "options.h": "c",
     "cleanConsole.h": "c",
-    "menu.h": "c"
+    "menu.h": "c",
+    "session":"c"
   }
 }

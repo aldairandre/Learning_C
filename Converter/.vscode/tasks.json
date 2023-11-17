@@ -7,8 +7,9 @@
       "args": [
         "-fdiagnostics-color=always",
         "-g",
-        "${workspaceFolder}/src/*.c",
-        "${workspaceFolder}/src/menu/*.c",  
+        "${workspaceFolder}/src/*.c", 
+        "${workspaceFolder}/src/menu/*.c",
+        "${workspaceFolder}/src/footer/*.c", 
         "-o",
         "${workspaceFolder}/bin/Number System Converter",
         "-I",
