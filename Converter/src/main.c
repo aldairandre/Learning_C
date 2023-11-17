@@ -7,11 +7,10 @@
 
 int main(int argc, char const *argv[])
 {
-
   int choice;
 
   menu();
-  scanf("%d", &choice);
+  scanf("\t\t%d", &choice);
 
   switch (choice)
   {
