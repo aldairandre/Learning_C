@@ -5,6 +5,7 @@
 #include "header.h"
 #include "socialMedia.h"
 #include "welcomeScreen.h"
+#include "options.h"
 
 #define ENTER 13
 #define TAB 9
@@ -16,12 +17,12 @@ void userInput(int choice)
 
   if (choice == 1) // Decimal input validation code
   {
-    long int deci;
+    int deci;
     int flag = 0;
     header();
     printf(("\n"));
     printf("\tDigite o decimal: ");
-    scanf("%ld", &deci);
+    scanf("%d", &deci);
 
     if (deci > 0)
       flag = digitChecker(deci, choice);
@@ -39,7 +40,8 @@ void userInput(int choice)
     }
     else
     {
-      printf("Feature sendo criada\n");
+      decimalToBinary(deci);
+      welcomeScreen();
     }
   }
   else if (choice == 2) // Binary input validation code

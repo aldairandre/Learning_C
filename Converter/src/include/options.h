@@ -3,7 +3,7 @@
 
 int binaryToDecimal(void) ;
 
-int decimalToBinary(void) ;
+int decimalToBinary(int) ;
 
 int logOut(void);
 

@@ -11,11 +11,10 @@
 extern char userSession;
 extern bool keepSessionAlive;
 
-void decimalToBinary()
+void decimalToBinary(int decimalNumber)
 {
 
   // VARIABLES
-  int decimalNumber;
   const int BASE_NUMBER = 2;
 
   cleanConsole();
@@ -23,18 +22,6 @@ void decimalToBinary()
   printf("\n");
   printf("\n");
   printf("\n");
-
-  // Getting the decimal number
-
-  printf("\tDigite um número decimal: ");
-  scanf("%d", &decimalNumber);
-
-  // Form to convert the decimal number into a bunary format
-
-  if (decimalNumber == 0)
-  {
-    printf("0");
-  }
 
   int binary[32];
   int index = 0;

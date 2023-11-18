@@ -11,9 +11,9 @@ int digitChecker(int num, int choice)
         {    
             rem = temp % 10;
 
-            if((rem == 0 || rem == 1) && choice == 1) // binary, choice = 1 
+            if(rem >= 0 && rem <= 9 && choice == 1) // binary, choice = 1 
                 temp = temp / 10;
-            else if(rem >= 0 && rem <= 9 && choice == 2) // decimal, choice = 2
+            else if((rem == 0 || rem == 1) && choice == 2) // decimal, choice = 2
                 temp = temp / 10;
             else if(rem >= 0 && rem <=7 && choice == 3) // octal, choice = 3
                 temp = temp / 10;
