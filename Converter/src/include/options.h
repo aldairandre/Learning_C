@@ -4,6 +4,7 @@
 int binaryToDecimal(void) ;
 
 int decimalToBinary(int) ;
+int decimal_hexadecimal(int);
 
 int logOut(void);
 

@@ -4,6 +4,7 @@
     "options.h": "c",
     "cleanConsole.h": "c",
     "session": "c",
-    "welcomescreen.h": "c"
+    "welcomescreen.h": "c",
+    "header.h": "c"
   }
 }
